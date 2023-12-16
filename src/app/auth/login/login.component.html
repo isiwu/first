@@ -1,0 +1,16 @@
+<div>
+  <h1 class="capitalize text-2xl underline text-center">login</h1>
+  <form action="" [formGroup]="loginform" (ngSubmit)="handleSubmit()" class="shadow-xl w-full px-3 space-y-2 mb-2">
+    <div>
+      <p><label for="email">Email:</label></p>
+      <p><input type="email" formControlName="email" class="px-2 py-1 outline outline-1 w-full rounded-md"></p>
+      <p>{{ loginform.value.email | uppercase}}</p>
+    </div>
+    <div>
+      <p><label for="pass">Password:</label></p>
+      <p><input type="password" formControlName="password" class="px-2 py-1 outline outline-1 w-full rounded-md"></p>
+      <!-- <p>{{ loginform.value.password }}</p> -->
+    </div>
+    <div class="pt-5 pb-4"><button type="submit" class="py-1 text-center w-full bg-blue-700 hover:bg-blue-600 disabled:bg-blue-400 disabled:cursor-not-allowed text-white rounded-md" [disabled]="!loginform.valid">Login</button></div>
+  </form>
+</div>

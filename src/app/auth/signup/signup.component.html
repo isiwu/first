@@ -1,0 +1,19 @@
+<div>
+  <h1 class="capitalize text-2xl underline text-center">signup</h1>
+  <form action="" class="shadow-xl w-full px-3 space-y-2 mb-2">
+    <div>
+      <p><label for="email">Email:</label></p>
+      <p>
+        <!-- <input id="framework" type="text" [(ngModel)]="favoriteFramework" /> -->
+        <input type="email" id="email" name="email" [(ngModel)]="email" class="px-2 py-1 outline outline-1 w-full rounded-md">
+      </p>
+      <p>{{ email }}</p>
+    </div>
+    <div>
+      <p><label for="pass">Password:</label></p>
+      <p><input type="password" [(ngModel)]="password" name="password" class="px-2 py-1 outline outline-1 w-full rounded-md"></p>
+      <p>{{ password }}</p>
+    </div>
+    <div class="pt-5 pb-4"><button type="submit" class="py-1 text-center w-full bg-blue-700 hover:bg-blue-600 text-white rounded-md">Signup</button></div>
+  </form>
+</div>
